@@ -2,9 +2,25 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>AJAX on the beach</title>
+    <script type="text/javascript" src="./functions/xhrFunction.js"></script>
 </head>
 <body>
+<script type="text/javascript">
 
+    var toto = xhrFuntion();
+
+    toto.onreadystatechange = function () {
+      if(toto.readyState = 4 && toto.status == 200 ) {
+          alert(toto.responseText);
+      }
+    };
+
+    toto.open("GET", "reponse.php?parametre1=0&parametre2=10", true);
+    toto.send(null);
+
+
+
+</script>
 </body>
 </html>
