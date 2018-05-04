@@ -8,17 +8,17 @@
 <body>
 <script type="text/javascript">
 
-    var toto = xhrFuntion();
-
-    toto.onreadystatechange = function () {
-      if(toto.readyState = 4 && toto.status == 200 ) {
-          alert(toto.responseText);
-      }
-    };
-
-    toto.open("GET", "reponse.php?parametre1=0&parametre2=10", true);
-    toto.send(null);
-
+    $function(){
+        $('#testAJAX').click(function()) {
+            $ajax({
+                url: 'reponse.php',
+                data : {
+                    'parametre1 : 1
+                    parametre2 : 2'
+                }
+            })
+        }
+    }
 
 
 </script>
